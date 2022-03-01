@@ -1,0 +1,82 @@
+% ==========================================================
+% Front Page for GPR-20 Manuals
+%   Please define the command \GPRManualName to define
+%   the title name
+% ==========================================================
+
+% FRONT PAGE
+\begin{titlepage}
+    \begin{center}
+        
+        \vspace*{2cm}
+        
+        \includegraphics[width=0.5\textwidth]{images/logo.pdf}
+        
+        \vspace{3cm}
+        
+        \begin{huge}
+            \textbf{\GPRManualName}
+        \end{huge}
+        
+        \vfill
+        
+        \begin{singlespace}
+            Grupo de Desminado Humanitario \\
+            Departamento de Ingeniería Eléctrica y Electrónica \\
+            Facultad de Ingeniería \\
+            Universidad de Los Andes \\
+            Bogotá D.C., Colombia       
+        \end{singlespace}
+    \end{center}
+\end{titlepage}
+
+
+
+% PROPRIETARY NOTICE AND CONTACT INFORMATION
+\pagenumbering{gobble}
+\section*{GPR-20 \GPRManualName}
+\subsection*{Proprietary Notice}
+\doclicenseThis
+
+\subsection*{Contact Information}
+\noindent Please communicate any comments to:
+
+\begin{tabular}{ll}
+    \textbf{Name:} & Grupo de Desminado Humanitario  \\
+    \textbf{Email:} & \url{desminadohumanitario@uniandes.edu.co} \\
+    \textbf{Dependency:} & Departamento de Ingeniería Eléctrica y Electrónica \\
+    \textbf{University:} & Universidad de Los Andes \\
+    \textbf{City:} & Bogotá D.C. \\
+    \textbf{Country:} & Colombia
+\end{tabular}
+    
+
+% VERSIONING
+\newpage
+\section*{Versioning}
+\begin{tabularx}{\linewidth}{|p{4cm}|X|}
+    
+    \hline \textbf{Date} & \textbf{Comments} \\ \hline
+    \endfirsthead
+    
+    \hline \textbf{Date} & \textbf{Comments} \\ \hline
+    \endhead
+    
+    \endfoot
+    
+    \endlastfoot
+    
+    \csvreader[late after line=\\ \hline, late after last line=\\ \hline]
+    {data/versions.csv}
+    {}
+    {\csvcoli & \csvcolii}
+
+\end{tabularx}
+
+
+
+% TABLE OF CONTENTS
+\newpage
+\pagenumbering{arabic}
+\tableofcontents
+
